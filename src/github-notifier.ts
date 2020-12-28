@@ -31,7 +31,6 @@ export class GithubNotifier extends cdk.Construct {
       },
       bundling: {
         minify: true,
-        externalModules: [],
       },
     });
   }
