@@ -13,6 +13,10 @@ const project = new TaimosCdkConstructLibrary({
     'aws-sdk',
     'axios',
   ],
+  peerDeps: [
+    'aws-sdk',
+    'axios',
+  ],
   repository: 'https://github.com/taimos/cdk-construct-github-notifier.git',
   cdkDependencies: [
     '@aws-cdk/core',
