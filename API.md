@@ -40,15 +40,43 @@ new GithubNotifier(scope: Construct, id: string, props: GithubNotifierProps)
 ### Methods
 
 
-#### onPipelineStateChange(pipeline, stateContext)🔹 <a id="taimos-cdk-construct-github-notifier-githubnotifier-onpipelinestatechange"></a>
+#### onActionStateChange(action, stateContext)🔹 <a id="taimos-cdk-construct-github-notifier-githubnotifier-onactionstatechange"></a>
 
 
 
 ```ts
-onPipelineStateChange(pipeline: Pipeline, stateContext: string): void
+onActionStateChange(action: IAction, stateContext: string): void
+```
+
+* **action** (<code>[IAction](#aws-cdk-aws-codepipeline-iaction)</code>)  *No description*
+* **stateContext** (<code>string</code>)  *No description*
+
+
+
+
+#### onPipelineStateChange(pipeline, stateContext?)🔹 <a id="taimos-cdk-construct-github-notifier-githubnotifier-onpipelinestatechange"></a>
+
+
+
+```ts
+onPipelineStateChange(pipeline: Pipeline, stateContext?: string): void
 ```
 
 * **pipeline** (<code>[Pipeline](#aws-cdk-aws-codepipeline-pipeline)</code>)  *No description*
+* **stateContext** (<code>string</code>)  *No description*
+
+
+
+
+#### onStageStateChange(stage, stateContext?)🔹 <a id="taimos-cdk-construct-github-notifier-githubnotifier-onstagestatechange"></a>
+
+
+
+```ts
+onStageStateChange(stage: IStage, stateContext?: string): void
+```
+
+* **stage** (<code>[IStage](#aws-cdk-aws-codepipeline-istage)</code>)  *No description*
 * **stateContext** (<code>string</code>)  *No description*
 
 

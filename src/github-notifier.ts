@@ -40,16 +40,39 @@ export class GithubNotifier extends cdk.Construct {
     }));
   }
 
-  public onPipelineStateChange(pipeline: codepipeline.Pipeline, stateContext: string) {
+  public onPipelineStateChange(pipeline: codepipeline.Pipeline, stateContext?: string) {
     pipeline.onStateChange('PipelineStateChange', {
       target: new targets.LambdaFunction(this.eventHandler, {
         event: events.RuleTargetInput.fromObject({
           event: events.EventField.fromPath('$'),
           context: {
-            stateContext,
+            stateContext: stateContext ?? 'CodePipeline',
           },
         }),
       }),
     });
   }
+
+  public onStageStateChange(stage: codepipeline.IStage, stateContext?: string) {
+    stage.onStateChange('StageStateChange', new targets.LambdaFunction(this.eventHandler, {
+      event: events.RuleTargetInput.fromObject({
+        event: events.EventField.fromPath('$'),
+        context: {
+          stateContext: stateContext ?? `CodePipeline-${stage.stageName}`,
+        },
+      }),
+    }));
+  }
+
+  public onActionStateChange(action: codepipeline.IAction, stateContext: string) {
+    action.onStateChange('ActionStateChange', new targets.LambdaFunction(this.eventHandler, {
+      event: events.RuleTargetInput.fromObject({
+        event: events.EventField.fromPath('$'),
+        context: {
+          stateContext,
+        },
+      }),
+    }));
+  }
+
 }

@@ -27,20 +27,21 @@ test('snapshot of Github Notifier', () => {
       }),
     ],
   });
-
-  pipeline.addStage({
-    stageName: 'Deploy',
-    actions: [
-      new actions.CloudFormationCreateUpdateStackAction({
-        actionName: 'Deploy',
-        adminPermissions: true,
-        stackName: 'testStack',
-        templatePath: sourceArtifact.atPath('test.json'),
-      }),
-    ],
-  });
-
   notifier.onPipelineStateChange(pipeline, 'TestMessage');
+
+  const stage = pipeline.addStage({
+    stageName: 'Deploy',
+  });
+  notifier.onStageStateChange(stage);
+
+  const action = new actions.CloudFormationCreateUpdateStackAction({
+    actionName: 'Deploy',
+    adminPermissions: true,
+    stackName: 'testStack',
+    templatePath: sourceArtifact.atPath('test.json'),
+  });
+  stage.addAction(action);
+  notifier.onActionStateChange(action, 'DeployAction');
 
   expect(app.synth().getStackArtifact(stack.artifactId).template).toMatchSnapshot();
 });
