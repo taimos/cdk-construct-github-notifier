@@ -3,28 +3,29 @@
 exports[`snapshot of Github Notifier 1`] = `
 Object {
   "Parameters": Object {
-    "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375ArtifactHash57C519FA": Object {
-      "Description": "Artifact hash for asset \\"16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375\\"",
+    "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5ArtifactHash35D2F059": Object {
+      "Description": "Artifact hash for asset \\"d84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5\\"",
       "Type": "String",
     },
-    "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375S3Bucket31ED5DBE": Object {
-      "Description": "S3 bucket for asset \\"16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375\\"",
+    "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5S3Bucket8CBA02B6": Object {
+      "Description": "S3 bucket for asset \\"d84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5\\"",
       "Type": "String",
     },
-    "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375S3VersionKey408EF425": Object {
-      "Description": "S3 key for asset version \\"16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375\\"",
+    "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5S3VersionKey60BE9AC5": Object {
+      "Description": "S3 key for asset version \\"d84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5\\"",
       "Type": "String",
     },
   },
   "Resources": Object {
     "GHCEC69A31": Object {
       "DependsOn": Array [
+        "GHServiceRoleDefaultPolicy61907956",
         "GHServiceRoleFEA1E84C",
       ],
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375S3Bucket31ED5DBE",
+            "Ref": "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5S3Bucket8CBA02B6",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -37,7 +38,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375S3VersionKey408EF425",
+                          "Ref": "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5S3VersionKey60BE9AC5",
                         },
                       ],
                     },
@@ -50,7 +51,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters16d53b1bcb181d1cd7ee150fa173fef4688572a3cfaf4714b6772c0cc7b99375S3VersionKey408EF425",
+                          "Ref": "AssetParametersd84f0aa33cec61e718a0c2bf918ea4dc339bcae891f1f192514e34dd49a984c5S3VersionKey60BE9AC5",
                         },
                       ],
                     },
@@ -77,6 +78,27 @@ Object {
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
+    },
+    "GHServiceRoleDefaultPolicy61907956": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "codepipeline:GetPipelineExecution",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "GHServiceRoleDefaultPolicy61907956",
+        "Roles": Array [
+          Object {
+            "Ref": "GHServiceRoleFEA1E84C",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
     },
     "GHServiceRoleFEA1E84C": Object {
       "Properties": Object {

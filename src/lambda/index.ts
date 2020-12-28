@@ -31,13 +31,13 @@ export async function handler(targetEvent: any) {
 };
 
 function transformState(state: string) {
-  if (state === 'STARTED') {
+  if (state === 'STARTED' || state === 'CANCELED') {
     return 'pending';
   }
   if (state === 'SUCCEEDED') {
     return 'success';
   }
-  if (state === 'FAILED') {
+  if (state === 'FAILED' || state === 'SUPERSEDED') {
     return 'failure';
   }
   return null;

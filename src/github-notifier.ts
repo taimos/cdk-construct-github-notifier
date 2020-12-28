@@ -3,6 +3,7 @@ import * as path from 'path';
 import * as codepipeline from '@aws-cdk/aws-codepipeline';
 import * as events from '@aws-cdk/aws-events';
 import * as targets from '@aws-cdk/aws-events-targets';
+import * as iam from '@aws-cdk/aws-iam';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as lambdajs from '@aws-cdk/aws-lambda-nodejs';
 import * as cdk from '@aws-cdk/core';
@@ -33,6 +34,10 @@ export class GithubNotifier extends cdk.Construct {
         minify: true,
       },
     });
+    this.eventHandler.addToRolePolicy(new iam.PolicyStatement({
+      actions: ['codepipeline:GetPipelineExecution'],
+      resources: ['*'],
+    }));
   }
 
   public onPipelineStateChange(pipeline: codepipeline.Pipeline, stateContext: string) {
