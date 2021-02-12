@@ -4,7 +4,6 @@
     "type": "git",
     "url": "https://github.com/taimos/cdk-construct-github-notifier.git"
   },
-  "bin": {},
   "scripts": {
     "projen": "npx projen",
     "start": "npx projen start",
@@ -30,51 +29,50 @@
     "organization": true
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.80.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.80.0",
-    "@taimos/projen": "^0.0.13",
-    "@types/jest": "^26.0.19",
+    "@aws-cdk/assert": "^1.89.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.89.0",
+    "@taimos/projen": "^0.0.36",
+    "@types/jest": "^26.0.20",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "esbuild": "^0.8.26",
-    "eslint": "^7.16.0",
+    "esbuild": "^0.8.44",
+    "eslint": "^7.19.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "jest-junit": "^12",
-    "jsii": "^1.16.0",
-    "jsii-diff": "^1.16.0",
-    "jsii-docgen": "^1.8.1",
-    "jsii-pacmak": "^1.16.0",
-    "jsii-release": "^0.2.9",
-    "json-schema": "^0.2.5",
-    "projen": "^0.9.2",
+    "jsii": "^1.20.1",
+    "jsii-diff": "^1.20.1",
+    "jsii-docgen": "^1.8.40",
+    "jsii-pacmak": "^1.20.1",
+    "json-schema": "^0.3.0",
+    "projen": "^0.16.3",
     "standard-version": "^9.0.0",
-    "ts-jest": "^26.4.4",
-    "typedoc": "^0.19.2",
+    "ts-jest": "^26.5.1",
+    "typedoc": "^0.20.24",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-codepipeline": "^1.80.0",
-    "@aws-cdk/aws-events": "^1.80.0",
-    "@aws-cdk/aws-events-targets": "^1.80.0",
-    "@aws-cdk/aws-iam": "^1.80.0",
-    "@aws-cdk/aws-lambda": "^1.80.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.80.0",
-    "@aws-cdk/core": "^1.80.0",
+    "@aws-cdk/aws-codepipeline": "^1.89.0",
+    "@aws-cdk/aws-events": "^1.89.0",
+    "@aws-cdk/aws-events-targets": "^1.89.0",
+    "@aws-cdk/aws-iam": "^1.89.0",
+    "@aws-cdk/aws-lambda": "^1.89.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.89.0",
+    "@aws-cdk/core": "^1.89.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-codepipeline": "^1.80.0",
-    "@aws-cdk/aws-events": "^1.80.0",
-    "@aws-cdk/aws-events-targets": "^1.80.0",
-    "@aws-cdk/aws-iam": "^1.80.0",
-    "@aws-cdk/aws-lambda": "^1.80.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.80.0",
-    "@aws-cdk/core": "^1.80.0",
-    "aws-sdk": "^2.817.0",
+    "@aws-cdk/aws-codepipeline": "^1.89.0",
+    "@aws-cdk/aws-events": "^1.89.0",
+    "@aws-cdk/aws-events-targets": "^1.89.0",
+    "@aws-cdk/aws-iam": "^1.89.0",
+    "@aws-cdk/aws-lambda": "^1.89.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.89.0",
+    "@aws-cdk/core": "^1.89.0",
+    "aws-sdk": "^2.842.0",
     "axios": "^0.21.1"
   },
   "bundledDependencies": [
@@ -87,9 +85,22 @@
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "version": "0.0.5",
+  "publishConfig": {
+    "tag": "latest --access public"
+  },
   "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
     "clearMocks": true,
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "clover",
+      "text"
+    ],
     "coverageDirectory": "coverage",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
@@ -97,9 +108,8 @@
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],
-    "testMatch": [
-      "**/__tests__/**/*.ts?(x)",
-      "**/?(*.)+(spec|test).ts?(x)"
+    "watchPathIgnorePatterns": [
+      "/node_modules/"
     ],
     "reporters": [
       "default",

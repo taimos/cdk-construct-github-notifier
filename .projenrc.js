@@ -4,7 +4,7 @@ const project = new TaimosCdkConstructLibrary({
   name: '@taimos/cdk-construct-github-notifier',
   authorAddress: 'info@taimos.de',
   authorName: 'Taimos GmbH',
-  cdkVersion: '1.80.0',
+  cdkVersion: '1.89.0',
   devDeps: [
     '@taimos/projen',
     'esbuild',
@@ -26,6 +26,7 @@ const project = new TaimosCdkConstructLibrary({
   cdkTestDependencies: [
     '@aws-cdk/aws-codepipeline-actions',
   ],
+  defaultReleaseBranch: 'main',
 });
 
 project.synth();
