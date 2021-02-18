@@ -29,8 +29,8 @@
     "organization": true
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.89.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.89.0",
+    "@aws-cdk/assert": "^1.90.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.90.0",
     "@taimos/projen": "^0.0.36",
     "@types/jest": "^26.0.20",
     "@types/node": "^10.17.0",
@@ -55,23 +55,23 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-codepipeline": "^1.89.0",
-    "@aws-cdk/aws-events": "^1.89.0",
-    "@aws-cdk/aws-events-targets": "^1.89.0",
-    "@aws-cdk/aws-iam": "^1.89.0",
-    "@aws-cdk/aws-lambda": "^1.89.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.89.0",
-    "@aws-cdk/core": "^1.89.0",
+    "@aws-cdk/aws-codepipeline": "^1.90.0",
+    "@aws-cdk/aws-events": "^1.90.0",
+    "@aws-cdk/aws-events-targets": "^1.90.0",
+    "@aws-cdk/aws-iam": "^1.90.0",
+    "@aws-cdk/aws-lambda": "^1.90.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.90.0",
+    "@aws-cdk/core": "^1.90.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-codepipeline": "^1.89.0",
-    "@aws-cdk/aws-events": "^1.89.0",
-    "@aws-cdk/aws-events-targets": "^1.89.0",
-    "@aws-cdk/aws-iam": "^1.89.0",
-    "@aws-cdk/aws-lambda": "^1.89.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.89.0",
-    "@aws-cdk/core": "^1.89.0",
+    "@aws-cdk/aws-codepipeline": "^1.90.0",
+    "@aws-cdk/aws-events": "^1.90.0",
+    "@aws-cdk/aws-events-targets": "^1.90.0",
+    "@aws-cdk/aws-iam": "^1.90.0",
+    "@aws-cdk/aws-lambda": "^1.90.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.90.0",
+    "@aws-cdk/core": "^1.90.0",
     "aws-sdk": "^2.842.0",
     "axios": "^0.21.1"
   },

@@ -4,7 +4,7 @@ const project = new TaimosCdkConstructLibrary({
   name: '@taimos/cdk-construct-github-notifier',
   authorAddress: 'info@taimos.de',
   authorName: 'Taimos GmbH',
-  cdkVersion: '1.89.0',
+  cdkVersion: '1.90.0',
   devDeps: [
     '@taimos/projen',
     'esbuild',
