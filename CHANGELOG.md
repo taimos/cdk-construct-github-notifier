@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/taimos/cdk-construct-github-notifier/compare/v0.0.6...v0.0.7) (2021-02-18)
+
+
+### Features
+
+* CDK 1.90.0 ([2c15d10](https://github.com/taimos/cdk-construct-github-notifier/commit/2c15d1051f52299d74a5283a938e246392b3536e))
+
 ### [0.0.6](https://github.com/taimos/cdk-construct-github-notifier/compare/v0.0.3...v0.0.6) (2021-02-12)
 
 ### [0.0.5](https://github.com/taimos/cdk-construct-github-notifier/compare/v0.0.3...v0.0.5) (2020-12-30)
