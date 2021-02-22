@@ -1395,9 +1395,9 @@
   integrity sha512-onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==
 
 "@types/node@^10.17.0":
-  version "10.17.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.53.tgz#95953f6eaf7e7002ee91762ade945484a4674aac"
-  integrity sha512-q1igVlMUU+10kzjxNlcLDH7gekuvFK1nevnp7MAyc6sqvK5siWSS37EuvKX9fM8d49SBcoP0iP9tqVHmdAjNhQ==
+  version "10.17.54"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.54.tgz#a737488631aca3ec7bd9f6229d77f1079e444793"
+  integrity sha512-c8Lm7+hXdSPmWH4B9z/P/xIXhFK3mCQin4yCYMd2p1qpMG5AfgyJuYZ+3q2dT7qLiMMMGMd5dnkFpdqJARlvtQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -4462,9 +4462,9 @@ jsii-diff@^1.20.1:
     yargs "^16.2.0"
 
 jsii-docgen@^1.8.40:
-  version "1.8.47"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.47.tgz#ff3f413b1b6b3437d185e787c49b11bc1301c8d0"
-  integrity sha512-PqWYF8jflMBw0blRvjG/6rHMykPLSoCW/KLez+yHcEYypJ6rNs7Oe13i5h2fAInjxkReoYrua8wZKcSg7C4w/w==
+  version "1.8.49"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.49.tgz#45afa5d4a342679b74b781495cf6678355cb4c15"
+  integrity sha512-seM4qOgyN2xUWkZAilzNcLL0UnNbBV1+Xuo2+6RZxqJxeDSjmFgJpeW+BI4YXkfvD2XTvRkmGaLcHSvLiW8ljg==
   dependencies:
     "@jsii/spec" "^1.16.0"
     fs-extra "^9.0.1"
@@ -6669,9 +6669,9 @@ typedoc-default-themes@^0.12.7:
   integrity sha512-0XAuGEqID+gon1+fhi4LycOEFM+5Mvm2PjwaiVZNAzU7pn3G2DEpsoXnFOPlLDnHY6ZW0BY0nO7ur9fHOFkBLQ==
 
 typedoc@^0.20.24:
-  version "0.20.25"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.20.25.tgz#f84b0b00dff545e945b63e2d5fff670fc9e86878"
-  integrity sha512-ZQZnjJPrt0rjp216gp6FQC1QC4ojcoKikhfOJ/51CqaJunVDilRLlIO5tCGWj1tzlYYT9eOGhJv7MF3t7rxSmw==
+  version "0.20.27"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.20.27.tgz#66391dfe4c4d1add4a4ef95a8f19b6bc62fe3389"
+  integrity sha512-Y61T2wEpBo6x0t0zeMNH6CH0n2Jt8E1IHObcK4fGT9nK9Zq6+Rurf0A9WqVbhRmkGpu1wBsGl+4kSJdIN+AOtg==
   dependencies:
     colors "^1.4.0"
     fs-extra "^9.1.0"
