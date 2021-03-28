@@ -5,6 +5,7 @@ const project = new TaimosCdkConstructLibrary({
   authorAddress: 'info@taimos.de',
   authorName: 'Taimos GmbH',
   cdkVersion: '1.90.0',
+  cdkDependenciesAsDeps: false,
   devDeps: [
     '@taimos/projen',
     'esbuild',
